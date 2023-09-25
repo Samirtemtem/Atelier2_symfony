@@ -1,3 +1,7 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /author
+    controller: App\Controller\AuthorController::list
+author_details:
+    path: /author/details/{id}
+    controller: App\Controller\AuthorController::authorDetails
+    methods: GET

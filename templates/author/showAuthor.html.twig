@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails de l'auteur{% endblock %}
+
+{% block body %}
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div style="text-align: center;">
+            <img src="{{ asset(author.picture) }}" alt="{{ author.username }}" width="200" height="200" style="border-radius: 10px;">
+            <h1 style="color: #333; text-transform: uppercase;">{{ author.username }}</h1>
+            <p><strong style="font-size: 18px;">Nom :</strong> {{ author.username }}</p>
+            <p><strong style="font-size: 18px;">Email :</strong> {{ author.email }}</p>
+            <p><strong style="font-size: 18px;">Nombre de livres :</strong> {{ author.nb_books }}</p>
+        </div>
+    </div>
+{% endblock %}
