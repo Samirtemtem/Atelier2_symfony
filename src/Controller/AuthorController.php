@@ -46,6 +46,7 @@ class AuthorController extends AbstractController
 
 public function authorDetails(int $id)
 {
+    $id--;
     $author = $this->authors[$id];
 
     if (!$author) {
