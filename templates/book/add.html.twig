@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout de livre{% endblock %}
+
+{% block body %}
+<form method="POST" class="needs-validation" novalidate>
+<div class="form-group">
+        {{ form_label(f.ref, 'Enter Reference', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(f.ref, {'attr': {'class': 'form-control', 'placeholder': 'Enter Reference'}}) }}
+        {{ form_errors(f.ref) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(f.title, 'Enter Title', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(f.title, {'attr': {'class': 'form-control', 'placeholder': 'Enter Title'}}) }}
+        {{ form_errors(f.title) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(f.category, 'Choose Category', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(f.category, {'attr': {'class': 'form-control', 'placeholder': 'Enter Category'}}) }}
+        {{ form_errors(f.category) }}
+    </div>
+
+    
+    <div class="form-group">
+        {{ form_label(f.Publication_date, 'Date of Publish', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(f.Publication_date, {'attr': {'class': 'form-control', 'placeholder': 'Enter datePublication'}}) }}
+        {{ form_errors(f.Publication_date) }}
+    </div>
+    {% if book is defined %}
+     <div class="form-group">
+        {{ form_label(f.published, 'publiée?', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(f.published, {'attr': {'class': '', 'placeholder': 'publiée?'}}) }}
+    </div>
+    {% endif %}
+ 
+     <div class="form-group">
+        {{ form_label(f.Author, 'Select Author', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(f.Author, {'attr': {'class': 'form-control', 'placeholder': 'Enter Author'}}) }}
+        {{ form_errors(f.Author) }}
+    </div>
+    
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

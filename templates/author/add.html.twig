@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<form method="POST" class="needs-validation" novalidate>
+    <div class="form-group">
+        {{ form_label(f.username, 'Username', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(f.username, {'attr': {'class': 'form-control', 'placeholder': 'Enter Username'}}) }}
+        {{ form_errors(f.username) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(f.Email, 'Email', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(f.Email, {'attr': {'class': 'form-control', 'placeholder': 'Enter Email'}}) }}
+        {{ form_errors(f.Email) }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{# Include Bootstrap CSS and JS in your template or layout file #}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

@@ -1,0 +1,49 @@
+default:
+    path : /
+    controller: App\Controller\AuthorController::list
+index:
+    path: /author
+    controller: App\Controller\AuthorController::list
+author_details:
+    path: /author/details/{id}
+    controller: App\Controller\AuthorController::authorDetails
+    methods: GET
+addauthor:
+    path: /addauthor
+    controller: App\Controller\AuthorController::Addauthor
+    methods: GET
+newauthor:
+    path: /author/new
+    controller: App\Controller\AuthorController::new
+    methods: GET
+newauthorsubmit:
+    path: /author/new
+    controller: App\Controller\AuthorController::new
+    methods: POST
+author_edit:
+    path: '/author/edit/{id}'
+    controller: 'App\Controller\AuthorController::edit'
+    methods: GET
+author_edit_submit:
+    path: '/author/edit/{id}'
+    controller: 'App\Controller\AuthorController::edit'
+    methods: POST
+author_delete:
+    path: '/author/delete/{id}'
+    controller: 'App\Controller\AuthorController::delete'
+    
+book_add:
+    path: '/book/new'
+    controller: 'App\Controller\BookController::new'
+book_index:
+    path: '/books'
+    controller: 'App\Controller\BookController::index'
+book_edit:
+    path: '/book/{id}'
+    controller: 'App\Controller\BookController::edit'
+book_delete:
+    path: '/book/delete/{id}'
+    controller: 'App\Controller\BookController::delete'
+book_show: 
+    path : '/book/show/{id}'
+    controller: 'App\Controller\BookController::show'
